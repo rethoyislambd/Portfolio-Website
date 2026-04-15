@@ -146,15 +146,18 @@
 
   /* REVIEWS */
   #reviews{padding-top:120px;}
-  .reviews-slider{position:relative;max-width:780px;margin:0 auto;}
-  .review-track{overflow:hidden;}
+  .reviews-slider{position:relative;max-width:900px;margin:0 auto;}
+  .slider-wrapper{display:flex;align-items:stretch;gap:16px;}
+  .slider-arrow{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--lime);background:transparent;color:var(--lime);cursor:none;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:20px;flex-shrink:0;align-self:center;}
+  .slider-arrow:hover{background:var(--lime);color:var(--black);box-shadow:0 0 16px var(--lime-glow);}
+  .review-track{overflow:hidden;flex:1;}
   .review-slide{display:none;}
-  .review-slide.active{display:flex;gap:28px;align-items:flex-start;animation:fadeSlide .4s ease;}
+  .review-slide.active{display:flex;gap:24px;align-items:flex-start;animation:fadeSlide .4s ease;min-height:200px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;}
   @keyframes fadeSlide{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:translateX(0);}}
-  .reviewer-pic{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--lime);flex-shrink:0;background:var(--card);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;color:var(--lime);}
+  .reviewer-pic{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--lime);flex-shrink:0;background:#1a1a1a;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:800;font-size:22px;color:var(--lime);align-self:flex-start;}
   .review-content{flex:1;}
   .stars{color:var(--lime);font-size:16px;margin-bottom:12px;letter-spacing:2px;}
-  .review-text{font-size:16px;line-height:1.75;color:var(--white);font-style:italic;margin-bottom:18px;}
+  .review-text{font-size:15px;line-height:1.75;color:var(--white);font-style:italic;margin-bottom:18px;}
   .reviewer-name{font-family:'Outfit',sans-serif;font-weight:700;font-size:15px;}
   .reviewer-role{font-size:13px;color:var(--gray);}
   .slider-nav{display:flex;gap:12px;justify-content:center;margin-top:36px;}
@@ -275,7 +278,7 @@
     </div>
 
     <div class="dropdown-wrap" id="socialDrop">
-      <button class="hdr-btn" onclick="toggleDrop('socialDrop')">
+      <button class="hdr-btn primary" onclick="toggleDrop('socialDrop')">
         Contact Me
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
@@ -507,31 +510,39 @@
         <div class="review-track">
           <div class="review-slide active">
             <div class="reviewer-pic">S</div>
-            <div class="stars">★★★★★</div>
-            <p class="review-text">"Rethoy completely transformed our funnel. We went from 1.2% to 3.8% conversion rate in just 6 weeks. His data-driven approach is unlike anything we've experienced. Worth every dollar."</p>
-            <div class="reviewer-name">Sarah M.</div>
-            <div class="reviewer-role">eCommerce Founder, UK</div>
+            <div class="review-content">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">"Rethoy completely transformed our funnel. We went from 1.2% to 3.8% conversion rate in just 6 weeks. His data-driven approach is unlike anything we've experienced. Worth every dollar."</p>
+              <div class="reviewer-name">Sarah M.</div>
+              <div class="reviewer-role">eCommerce Founder, UK</div>
+            </div>
           </div>
           <div class="review-slide">
             <div class="reviewer-pic">A</div>
-            <div class="stars">★★★★★</div>
-            <p class="review-text">"Our Meta Ads were burning money before Rethoy stepped in. He restructured everything — targeting, creatives, bidding. ROAS went from 1.8x to 4.2x. Incredible ROI on his fee."</p>
-            <div class="reviewer-name">Ahmed K.</div>
-            <div class="reviewer-role">CEO, Fashion Brand, UAE</div>
+            <div class="review-content">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">"Our Meta Ads were burning money before Rethoy stepped in. He restructured everything — targeting, creatives, bidding. ROAS went from 1.8x to 4.2x. Incredible ROI on his fee."</p>
+              <div class="reviewer-name">Ahmed K.</div>
+              <div class="reviewer-role">CEO, Fashion Brand, UAE</div>
+            </div>
           </div>
           <div class="review-slide">
             <div class="reviewer-pic">L</div>
-            <div class="stars">★★★★★</div>
-            <p class="review-text">"Rethoy's Looker Studio dashboard gave us clarity we never had before. For the first time we knew exactly what was working and what wasn't. Communication was excellent throughout."</p>
-            <div class="reviewer-name">Lena W.</div>
-            <div class="reviewer-role">Marketing Director, SaaS Company</div>
+            <div class="review-content">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">"Rethoy's Looker Studio dashboard gave us clarity we never had before. For the first time we knew exactly what was working and what wasn't. Communication was excellent throughout."</p>
+              <div class="reviewer-name">Lena W.</div>
+              <div class="reviewer-role">Marketing Director, SaaS Company</div>
+            </div>
           </div>
           <div class="review-slide">
             <div class="reviewer-pic">R</div>
-            <div class="stars">★★★★★</div>
-            <p class="review-text">"We hired Rethoy for a GA4 setup and ended up getting a full CRO audit. His funnel analysis found leaks we didn't even know existed. Our CPL dropped 40% in the first month."</p>
-            <div class="reviewer-name">Rahim T.</div>
-            <div class="reviewer-role">Growth Manager, B2B SaaS</div>
+            <div class="review-content">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">"We hired Rethoy for a GA4 setup and ended up getting a full CRO audit. His funnel analysis found leaks we didn't even know existed. Our CPL dropped 40% in the first month."</p>
+              <div class="reviewer-name">Rahim T.</div>
+              <div class="reviewer-role">Growth Manager, B2B SaaS</div>
+            </div>
           </div>
         </div>
         <button class="slider-arrow" onclick="changeSlide(1)">→</button>
